@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "name": "Taffarel",
+      "id": 1,
+      "avatar": "https://source.unsplash.com/100x100/?technology"
+    },
+    {
+      "name": "Bartolemeu",
+      "id": 2,
+      "avatar": "https://source.unsplash.com/100x100/?technology"
+    }
+  ]
+}
