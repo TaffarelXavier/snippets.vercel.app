@@ -1,7 +1,6 @@
-import React from 'react'
 import ErrorPage from 'next/error'
-
-const Component  = () => {
+import React from 'react'
+const Component = () => {
   return class WithError extends React.Component {
     static async getInitialProps(ctx) {
       const props =
@@ -11,16 +10,20 @@ const Component  = () => {
       if (props.statusCode && ctx.res) {
         ctx.res.statusCode = props.statusCode
       }
-      return props;
+      return props
     }
     render() {
       console.log(this.props.statusCode)
       if (this.props.statusCode) {
-        return (<>Taffarl <ErrorPage statusCode={this.props.statusCode} /></>)
+        return (
+          <>
+            <ErrorPage statusCode={this.props.statusCode} />
+          </>
+        )
       }
       return <Component {...this.props} />
     }
   }
 }
 
-export default Component;
+export default Component
